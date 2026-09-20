@@ -528,8 +528,8 @@ def admin_status_anzeigen():
 # ==================================================
 
 try:
-    startdaten_anlegen()
-    beispiel_pruefungsfragen_anlegen()
+    # Lernfächer und Prüfungsfragen werden nicht mehr automatisch neu angelegt.
+    # So bleiben bewusst gelöschte Inhalte auch nach einem Neustart gelöscht.
     faecher = faecher_laden()
 except Exception as fehler:
     st.error(
